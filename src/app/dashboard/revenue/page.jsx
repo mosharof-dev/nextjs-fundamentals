@@ -3,7 +3,7 @@ import React from 'react';
 const RevenuePage = () => {
     return (
         <div>
-            <h2>Mony coming Sonn</h2>
+            <h2>Revenue</h2>
         </div>
     );
 };
