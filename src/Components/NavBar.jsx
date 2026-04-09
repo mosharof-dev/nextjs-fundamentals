@@ -1,17 +1,20 @@
+'use client'
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const NavBar = () => {
-
+ const pathName = usePathname();
+ console.log("pathName", pathName);
     const links = <>
 
-    <li><Link href="/developer">Devloper</Link></li>
-    <li><Link href="/designer">Designer</Link></li>
-    <li><Link href="/about">About</Link></li>
-    <li><Link href="/contact">Contact</Link></li>
-    <li><Link href="/bolg">Bolg</Link></li>
-    <li><Link href="/dashboard">Dashboard</Link></li>
-     <li><Link href="/users">Users</Link></li>
-
+    <li><Link className={pathName === '/' ? 'text-primary' : ''} href="/">Home</Link></li>
+    <li><Link className={pathName === '/developer' ? 'text-primary' : ''} href="/developer">Developer</Link></li>
+    <li><Link className={pathName === '/designer' ? 'text-primary' : ''} href="/designer">Designer</Link></li>
+    <li><Link className={pathName === '/about' ? 'text-primary' : ''} href="/about">About</Link></li>
+    <li><Link className={pathName === '/contact' ? 'text-primary' : ''} href="/contact">Contact</Link></li>
+    <li><Link className={pathName === '/blog' ? 'text-primary' : ''} href="/blog">Blog</Link></li>
+    <li><Link className={pathName === '/dashboard' ? 'text-primary' : ''} href="/dashboard">Dashboard</Link></li>
+     <li><Link className={pathName === '/users' ? 'text-primary' : ''} href="/users">Users</Link></li>
 
     
     </>

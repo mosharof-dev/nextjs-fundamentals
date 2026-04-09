@@ -1,5 +1,10 @@
 import Link from 'next/link';
 
+
+export const metadata = {
+  title: 'User Details',
+  description: 'View detailed information about each user in our system.',
+}
 const UserDetails = async ({ params }) => {
   const { userId } = await params;
   

@@ -1,6 +1,10 @@
 import Link from 'next/link';
 import React from 'react';
 
+export const metadata = {
+  title: 'User Management',
+  description: 'Manage your users effectively with our user management system. View user profiles, contact details, and company information all in one place. Stay organized and connected with your users effortlessly.',
+}
 const UserPage = async() => {
     const res = await fetch('https://jsonplaceholder.typicode.com/users');
     const users = await res.json();
