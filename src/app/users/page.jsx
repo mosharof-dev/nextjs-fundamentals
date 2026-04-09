@@ -27,7 +27,7 @@ const UserPage = async() => {
               {user.name}
             </h2>
           </div> 
-        </div> {/* <- Ei duti closing tag missing chilo */}
+        </div> 
 
         {/* Actions */}
         <div className="card-actions justify-end mt-5">
